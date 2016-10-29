@@ -3,7 +3,7 @@ def snake_camel(snake_str)
 end
 
 def find_by(attribute, value)
-  answer = connection.execute <<- SQL
+  answer = connection.execute <<-SQL
     SELECT #{attribute} FROM #{table}
     WHERE value = #{value}
   SQL
