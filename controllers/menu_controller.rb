@@ -43,10 +43,14 @@ class MenuController
     when 5
       puts "Good-bye!"
       exit(0)
-      else
-        system "clear"
-        puts "Sorry, that is not a valid input"
-        main_menu
+    when 6
+      regular_select = Entry.select(:name, :phone_number, :email, :beans)
+      puts regular_select
+      main_menu
+    else
+      system "clear"
+      puts "Not a valid input"
+      main_menu
     end
   end
 
