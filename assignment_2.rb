@@ -4,7 +4,7 @@ end
 
 def find_by(attribute, value)
   answer = connection.execute <<-SQL
-    SELECT #{attribute} FROM #{table}
+    SELECT #{attribute} FROM #{column}
     WHERE value = #{value}
   SQL
   answer
